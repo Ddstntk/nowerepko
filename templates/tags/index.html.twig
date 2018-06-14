@@ -1,0 +1,10 @@
+<h1>View Bookmark</h1>
+{% if tags is defined and tags|length %}
+    <div>
+   {#     {{ tags.title }}, {{ tags.url }}#}
+    </div>
+{% else %}
+    <div>
+        No bookmark found!
+    </div>
+{% endif %}

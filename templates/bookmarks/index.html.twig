@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Bookmarks
+{% endblock %}
+
+{% block body %}
+    <h1>
+        Bookmarks
+    </h1>
+    {% if bookmarks is defined and bookmarks|length %}
+        <ul>
+            {% for row in bookmarks %}
+                <li>{{ row.title }}, {{ row.url }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div>
+            List is empty!
+        </div>
+    {% endif %}
+{% endblock %}
